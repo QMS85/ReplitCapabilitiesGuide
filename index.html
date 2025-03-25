@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replit Capabilities Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <img src="assets/replit-logo.svg" alt="Replit Logo" class="me-3" width="40">
+                <h1>Replit Capabilities Guide</h1>
+            </div>
+            <p class="lead mb-0">Your comprehensive guide to building web applications with Replit A.I.</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#web-apps">Web Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#integrations">Integrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tech-stacks">Technology Stacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deployment">Deployment Options</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#limitations">Limitations</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <section id="introduction" class="mb-5">
+            <h2>What is Replit?</h2>
+            <p class="lead">Replit is a collaborative browser-based IDE that makes it easy to code in 50+ languages without spending time on setup.</p>
+            <p>Beyond just being an IDE, Replit offers a comprehensive platform for developing, hosting, and sharing web applications of various types and complexities. With integrated AI assistance, Replit makes it easier than ever to turn your ideas into functioning web applications.</p>
+        </section>
+
+        <section id="web-apps" class="mb-5">
+            <h2>Web Applications You Can Build</h2>
+            <p>Replit supports a wide variety of web applications, from simple static websites to complex full-stack applications. Here's what you can create:</p>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-globe text-primary me-2"></i>Static Websites</h5>
+                            <p class="card-text">Create simple HTML, CSS, and JavaScript websites with ease. Perfect for portfolios, landing pages, and informational sites.</p>
+                            <p class="text-muted"><strong>Example:</strong> Personal portfolios, documentation sites</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-server text-primary me-2"></i>API Services</h5>
+                            <p class="card-text">Build backend APIs using Node.js, Python, or other supported languages to serve data to frontend applications.</p>
+                            <p class="text-muted"><strong>Example:</strong> RESTful APIs, GraphQL servers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-cubes text-primary me-2"></i>Full-Stack Applications</h5>
+                            <p class="card-text">Develop complete applications with frontend, backend, and database components all within Replit.</p>
+                            <p class="text-muted"><strong>Example:</strong> Social media apps, e-commerce sites</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-robot text-primary me-2"></i>AI-Powered Applications</h5>
+                            <p class="card-text">Leverage AI APIs within your applications to create intelligent features and services.</p>
+                            <p class="text-muted"><strong>Example:</strong> Chatbots, content generators, recommendation systems</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-gamepad text-primary me-2"></i>Web Games</h5>
+                            <p class="card-text">Develop browser-based games using JavaScript and HTML5 canvas or WebGL.</p>
+                            <p class="text-muted"><strong>Example:</strong> Puzzle games, simple multiplayer games</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-cogs text-primary me-2"></i>Web Utilities</h5>
+                            <p class="card-text">Create useful web tools and utilities that solve specific problems.</p>
+                            <p class="text-muted"><strong>Example:</strong> Calculators, converters, data visualizers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="integrations" class="mb-5">
+            <h2>Available Integrations</h2>
+            <p>Replit allows you to integrate your applications with various external services and APIs. Here are some of the key integration possibilities:</p>
+            
+            <div class="accordion mt-4" id="integrationsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            <i class="fas fa-database me-2"></i> Database Integrations
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#integrationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Replit Database:</strong> Built-in key-value store for simple data persistence</li>
+                                <li class="list-group-item"><strong>MongoDB:</strong> Connect to MongoDB Atlas for NoSQL database needs</li>
+                                <li class="list-group-item"><strong>PostgreSQL:</strong> Connect to external PostgreSQL databases</li>
+                                <li class="list-group-item"><strong>SQLite:</strong> Use SQLite for lightweight relational database needs</li>
+                                <li class="list-group-item"><strong>Firebase:</strong> Integrate with Firebase Realtime Database or Firestore</li>
+                                <li class="list-group-item"><strong>Supabase:</strong> Connect to Supabase for PostgreSQL and Auth services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            <i class="fas fa-cloud me-2"></i> Cloud Service Integrations
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#integrationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>AWS Services:</strong> Connect to S3, Lambda, and other AWS services</li>
+                                <li class="list-group-item"><strong>Google Cloud:</strong> Integrate with Google Cloud Platform services</li>
+                                <li class="list-group-item"><strong>Microsoft Azure:</strong> Connect to Azure services</li>
+                                <li class="list-group-item"><strong>Cloudinary:</strong> For image and video management</li>
+                                <li class="list-group-item"><strong>Stripe:</strong> For payment processing</li>
+                                <li class="list-group-item"><strong>SendGrid/Mailgun:</strong> For email services</li>
+                                <li class="list-group-item"><strong>Twilio:</strong> For SMS and communication services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            <i class="fas fa-brain me-2"></i> AI and Machine Learning Integrations
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#integrationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>OpenAI API:</strong> Integrate GPT models for natural language processing</li>
+                                <li class="list-group-item"><strong>Hugging Face:</strong> Access various ML models for different tasks</li>
+                                <li class="list-group-item"><strong>TensorFlow.js:</strong> Run machine learning models in the browser</li>
+                                <li class="list-group-item"><strong>Google Cloud AI:</strong> Access Google's AI and ML services</li>
+                                <li class="list-group-item"><strong>Replicate:</strong> Run ML models in the cloud</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            <i class="fas fa-plug me-2"></i> Third-Party API Integrations
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#integrationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Social Media APIs:</strong> Twitter, Facebook, Instagram, etc.</li>
+                                <li class="list-group-item"><strong>E-commerce APIs:</strong> Shopify, WooCommerce, etc.</li>
+                                <li class="list-group-item"><strong>Payment Gateways:</strong> PayPal, Stripe, Square</li>
+                                <li class="list-group-item"><strong>Mapping Services:</strong> Google Maps, Mapbox</li>
+                                <li class="list-group-item"><strong>Weather APIs:</strong> OpenWeatherMap, Weather.gov</li>
+                                <li class="list-group-item"><strong>Authentication Services:</strong> Auth0, Firebase Auth, OAuth providers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            <i class="fas fa-code-branch me-2"></i> Developer Tool Integrations
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#integrationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>GitHub:</strong> Connect with GitHub repositories</li>
+                                <li class="list-group-item"><strong>GitLab:</strong> Integrate with GitLab repositories</li>
+                                <li class="list-group-item"><strong>CI/CD Services:</strong> GitHub Actions, CircleCI, etc.</li>
+                                <li class="list-group-item"><strong>Testing Platforms:</strong> Jest, Cypress, etc.</li>
+                                <li class="list-group-item"><strong>Monitoring Services:</strong> Sentry, LogRocket, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech-stacks" class="mb-5">
+            <h2>Supported Technology Stacks</h2>
+            <p>Replit supports a wide range of programming languages and frameworks, allowing you to build applications using your preferred technology stack:</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h4><i class="fas fa-code me-2"></i>Frontend Technologies</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>Frameworks & Libraries:</h5>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">React</span>
+                                <span class="badge bg-primary">Vue.js</span>
+                                <span class="badge bg-primary">Angular</span>
+                                <span class="badge bg-primary">Svelte</span>
+                                <span class="badge bg-primary">Next.js</span>
+                                <span class="badge bg-primary">Nuxt.js</span>
+                            </div>
+                            
+                            <h5>CSS Frameworks:</h5>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-success">Bootstrap</span>
+                                <span class="badge bg-success">Tailwind CSS</span>
+                                <span class="badge bg-success">Material UI</span>
+                                <span class="badge bg-success">Bulma</span>
+                                <span class="badge bg-success">Chakra UI</span>
+                            </div>
+                            
+                            <h5>Build Tools:</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-secondary">Webpack</span>
+                                <span class="badge bg-secondary">Vite</span>
+                                <span class="badge bg-secondary">Parcel</span>
+                                <span class="badge bg-secondary">esbuild</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h4><i class="fas fa-server me-2"></i>Backend Technologies</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>Languages:</h5>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-info">JavaScript/Node.js</span>
+                                <span class="badge bg-info">Python</span>
+                                <span class="badge bg-info">Ruby</span>
+                                <span class="badge bg-info">PHP</span>
+                                <span class="badge bg-info">Java</span>
+                                <span class="badge bg-info">Go</span>
+                                <span class="badge bg-info">Rust</span>
+                                <span class="badge bg-info">C#/.NET</span>
+                            </div>
+                            
+                            <h5>Frameworks:</h5>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-warning text-dark">Express.js</span>
+                                <span class="badge bg-warning text-dark">Django</span>
+                                <span class="badge bg-warning text-dark">Flask</span>
+                                <span class="badge bg-warning text-dark">Ruby on Rails</span>
+                                <span class="badge bg-warning text-dark">Laravel</span>
+                                <span class="badge bg-warning text-dark">Spring Boot</span>
+                                <span class="badge bg-warning text-dark">FastAPI</span>
+                                <span class="badge bg-warning text-dark">NestJS</span>
+                            </div>
+                            
+                            <h5>API Protocols:</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-danger">REST</span>
+                                <span class="badge bg-danger">GraphQL</span>
+                                <span class="badge bg-danger">WebSockets</span>
+                                <span class="badge bg-danger">gRPC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4><i class="fas fa-database me-2"></i>Database Technologies</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>SQL Databases:</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>SQLite (built-in file-based)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>PostgreSQL (via external connection)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>MySQL (via external connection)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>NoSQL Databases:</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Replit Database (built-in key-value store)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>MongoDB (via external connection)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Firebase Realtime Database/Firestore</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Redis (via external connection)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h4><i class="fas fa-toolbox me-2"></i>Specialized Technologies</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Data Science & ML:</h5>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">TensorFlow</span>
+                                <span class="badge bg-primary">PyTorch</span>
+                                <span class="badge bg-primary">Pandas</span>
+                                <span class="badge bg-primary">NumPy</span>
+                                <span class="badge bg-primary">scikit-learn</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Dev Ops:</h5>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-success">Git</span>
+                                <span class="badge bg-success">Nginx</span>
+                                <span class="badge bg-success">PM2</span>
+                                <span class="badge bg-success">CI/CD Workflows</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Authentication:</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-info">JWT</span>
+                                <span class="badge bg-info">OAuth</span>
+                                <span class="badge bg-info">Firebase Auth</span>
+                                <span class="badge bg-info">Auth0</span>
+                                <span class="badge bg-info">Passport.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deployment" class="mb-5">
+            <h2>Deployment Options</h2>
+            <p>One of Replit's strongest features is its seamless deployment capabilities. Here's how you can deploy your web applications:</p>
+            
+            <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h4><i class="fas fa-rocket me-2"></i>Always-On Replit Deployments</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Keep your web applications running even when you're not actively using the Replit editor.</p>
+                            <h5>Features:</h5>
+                            <ul>
+                                <li>24/7 uptime for your applications</li>
+                                <li>Automatic URL generation (yourusername.replit.app)</li>
+                                <li>Built-in HTTPS security</li>
+                                <li>Automatic restarts if your application crashes</li>
+                            </ul>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>Always-On is a paid feature available with Replit's subscription plans.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h4><i class="fas fa-globe me-2"></i>Custom Domains</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Connect your own domain name to your Replit applications for a professional presence.</p>
+                            <h5>Options:</h5>
+                            <ul>
+                                <li>Connect root domains (example.com)</li>
+                                <li>Set up subdomains (app.example.com)</li>
+                                <li>Automatic SSL certificate management</li>
+                                <li>DNS configuration assistance</li>
+                            </ul>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>Custom domains are available with certain Replit subscription plans.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <h4><i class="fas fa-share-alt me-2"></i>Sharing & Collaboration</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Share your deployed applications and collaborate with others.</p>
+                            <h5>Capabilities:</h5>
+                            <ul>
+                                <li>Generate shareable links for your deployed applications</li>
+                                <li>Embed your Replit applications in other websites</li>
+                                <li>Collaborate with others in real-time</li>
+                                <li>Set permissions for collaborators</li>
+                                <li>Fork existing projects to create your own versions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">
+                            <h4><i class="fas fa-code-branch me-2"></i>Deployment Workflows</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Set up development and production environments for your applications.</p>
+                            <h5>Practices:</h5>
+                            <ul>
+                                <li>Use Replit's multiplayer feature for collaborative development</li>
+                                <li>Set up environment variables for different environments</li>
+                                <li>Connect to GitHub for version control</li>
+                                <li>Use Replit's secrets for sensitive information</li>
+                                <li>Set up automated tests before deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="limitations" class="mb-5">
+            <h2>Limitations and Considerations</h2>
+            <p>While Replit is powerful, it's important to understand its limitations when planning your web applications:</p>
+            
+            <div class="card mb-4">
+                <div class="card-header bg-secondary text-white">
+                    <h4><i class="fas fa-exclamation-triangle me-2"></i>Technical Limitations</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Resource Constraints:</h5>
+                            <ul>
+                                <li><strong>CPU and Memory:</strong> Limited resources compared to dedicated hosting</li>
+                                <li><strong>Storage Space:</strong> Limited disk space for your applications</li>
+                                <li><strong>Concurrency:</strong> May struggle with high-traffic applications</li>
+                                <li><strong>Long-running Processes:</strong> Some limitations on background tasks unless using Always-On</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Performance Considerations:</h5>
+                            <ul>
+                                <li><strong>Cold Starts:</strong> Free repls may experience cold starts after periods of inactivity</li>
+                                <li><strong>Network Latency:</strong> Response times may vary based on server locations</li>
+                                <li><strong>Database Performance:</strong> External database connections may have latency</li>
+                                <li><strong>File System:</strong> Not optimized for heavy file operations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-info text-white">
+                            <h4><i class="fas fa-dollar-sign me-2"></i>Free Tier vs. Paid Plans</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>Free Tier Limitations:</h5>
+                            <ul>
+                                <li>Limited compute resources</li>
+                                <li>Applications sleep after periods of inactivity</li>
+                                <li>Limited storage space</li>
+                                <li>Basic deployment options only</li>
+                                <li>Some features restricted</li>
+                            </ul>
+                            <h5>Paid Plan Benefits:</h5>
+                            <ul>
+                                <li>Always-On applications</li>
+                                <li>More CPU and RAM resources</li>
+                                <li>Increased storage space</li>
+                                <li>Custom domains</li>
+                                <li>Private repls and more collaborative features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h4><i class="fas fa-shield-alt me-2"></i>Security & Compliance</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>Security Considerations:</h5>
+                            <ul>
+                                <li>Use Replit Secrets for API keys and sensitive data</li>
+                                <li>Be cautious with user data storage due to privacy laws</li>
+                                <li>Public repls are visible to everyone unless you have a paid plan</li>
+                                <li>Consider encryption for sensitive data</li>
+                            </ul>
+                            <h5>Compliance Notes:</h5>
+                            <ul>
+                                <li>May not be suitable for applications requiring specific compliance certifications (HIPAA, etc.)</li>
+                                <li>Consider data residency requirements for your user data</li>
+                                <li>Review Replit's terms of service for usage limitations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getting-started" class="mb-5">
+            <h2>Getting Started with Replit</h2>
+            <p>Ready to build your first web application? Here's how to get started:</p>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-play-circle text-success me-2"></i>Quick Start Steps</h4>
+                            <ol class="list-group list-group-numbered mt-3">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Create a Replit account</div>
+                                        Sign up at <a href="https://replit.com" target="_blank">replit.com</a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Create a new Repl</div>
+                                        Choose a template based on your preferred technology
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Code your application</div>
+                                        Use the Replit IDE to write your code
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Run your application</div>
+                                        Click the Run button to start your application
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Share your application</div>
+                                        Use the generated URL to share your application
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-lightbulb text-warning me-2"></i>Best Practices</h4>
+                            <ul class="list-group mt-3">
+                                <li class="list-group-item">
+                                    <div class="fw-bold">Use appropriate templates</div>
+                                    Start with a template that matches your project needs
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="fw-bold">Store secrets securely</div>
+                                    Use Replit's secrets feature for API keys and sensitive data
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="fw-bold">Optimize for performance</div>
+                                    Be mindful of resource usage and optimize your code
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="fw-bold">Use version control</div>
+                                    Connect to GitHub for better version management
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="fw-bold">Leverage Replit AI</div>
+                                    Use the AI assistant to help with coding challenges
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About This Guide</h5>
+                    <p>This comprehensive guide provides information about web application development capabilities with Replit. It covers web application types, integrations, technology stacks, and deployment options.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Additional Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://docs.replit.com" target="_blank" class="text-light"><i class="fas fa-external-link-alt me-2"></i>Replit Documentation</a></li>
+                        <li><a href="https://replit.com/talk" target="_blank" class="text-light"><i class="fas fa-external-link-alt me-2"></i>Replit Community</a></li>
+                        <li><a href="https://blog.replit.com" target="_blank" class="text-light"><i class="fas fa-external-link-alt me-2"></i>Replit Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">Created as a resource for Replit users. Not an official Replit product.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
